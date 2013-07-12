@@ -23,6 +23,8 @@ macro(add_libflang_library name)
   list(APPEND libflang_libraries ${name})
 endmacro(add_libflang_library)
 
+include_directories(include)
+
 add_subdirectory(include)
 add_subdirectory(lib)
 

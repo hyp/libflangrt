@@ -1,4 +1,4 @@
-//===--- Core.h - Core library  --------------------------------*- C++ -*-===//
+//===--- Libflang.h - ------------------------------------------*- C++ -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
@@ -7,11 +7,10 @@
 //
 //===----------------------------------------------------------------------===//
 
-#ifndef LLVM_LIBFLANG_CORE_H
-#define LLVM_LIBFLANG_CORE_H
+#ifndef LLVM_LIBFLANG_H
+#define LLVM_LIBFLANG_H
 
-#include "Libflang.h"
-
-LIBFLANG_ABI void libflang_stop();
+#define LIBFLANG_ABI extern "C"
 
 #endif
+
