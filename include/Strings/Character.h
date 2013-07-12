@@ -1,4 +1,4 @@
-//===--- Core.h - Core library  --------------------------------*- C++ -*-===//
+//===--- Character.h - Character library  ------------------------*- C++ -*-===//
 //
 //                     The LLVM Compiler Infrastructure
 //
