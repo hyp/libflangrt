@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 
 # Enable C++ 11
 if(NOT MSVC)
-  add_definitions(-std=c++11)
+  add_definitions(-std=c++11 -fno-exceptions)
 endif()
 
 set(libflang_sources)
