@@ -38,7 +38,7 @@ static int getIntValue(WriteController *Controller, const void *Ptr, int32_t Siz
 }
 
 static FILE *getFilePtr(WriteController *Controller) {
-  return stdin;
+  return stdout;
 }
 
 class Buffer {

@@ -6,6 +6,8 @@ if(NOT MSVC)
   add_definitions(-std=c++11)
 endif()
 
+set(libflang_sources)
+
 macro(add_libflang_library name)
   set(srcs ${ARGN})
 
@@ -18,9 +20,6 @@ macro(add_libflang_library name)
   endif()
   
   add_library( ${name} ${libkind} ${srcs} )
-  set_target_properties(${name} PROPERTIES FOLDER "Libflang libraries")
-  
-  list(APPEND libflang_libraries ${name})
 endmacro(add_libflang_library)
 
 include_directories(include)
@@ -36,8 +35,12 @@ else()
   set(libkind)
 endif()
 
-add_library(libflang ${libkind} lib/Libflang.cpp)
-target_link_libraries(libflang ${libflang_libraries})
+add_library(libflang ${libkind} lib/Libflang.cpp
+  lib/Core/Core.cpp
+  lib/Numerical/Complex.cpp
+  lib/Strings/Character.cpp
+  lib/IO/Write.cpp
+)
 
 set(BUG_REPORT_URL "http://llvm.org/bugs/" CACHE STRING
   "Default URL where bug reports are to be submitted.")
