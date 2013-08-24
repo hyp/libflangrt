@@ -40,6 +40,7 @@ add_library(libflang ${libkind} lib/Libflang.cpp
   lib/Numerical/Complex.cpp
   lib/Strings/Character.cpp
   lib/IO/Write.cpp
+  lib/System/System.cpp
 )
 
 set(BUG_REPORT_URL "http://llvm.org/bugs/" CACHE STRING
