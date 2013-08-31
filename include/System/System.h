@@ -13,6 +13,8 @@
 #include "Libflang.h"
 
 LIBFLANG_ABI void  libflang_sys_init();
+LIBFLANG_ABI void *libflang_malloc(size_t size);
+LIBFLANG_ABI void  libflang_free(void *ptr);
 LIBFLANG_ABI float libflang_etime(float *time0, float *time1);
 
 #endif
