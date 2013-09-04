@@ -38,10 +38,20 @@ endif()
 add_library(libflang ${libkind} lib/Libflang.cpp
   lib/Core/Core.cpp
   lib/Numerical/Complex.cpp
+  lib/Numerical/Integer.cpp
   lib/Strings/Character.cpp
   lib/IO/Write.cpp
   lib/System/System.cpp
 )
+
+# Tests
+
+macro(add_libflang_test name)
+  add_executable( ${name} ${ARGN} )
+  target_link_libraries( ${name} libflang )
+endmacro(add_libflang_test)
+
+add_subdirectory(test)
 
 set(BUG_REPORT_URL "http://llvm.org/bugs/" CACHE STRING
   "Default URL where bug reports are to be submitted.")

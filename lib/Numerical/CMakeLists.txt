@@ -1,2 +1,3 @@
 add_libflang_library(libflangNumerical
-  Complex.cpp)
+  Complex.cpp
+  Integer.cpp)
