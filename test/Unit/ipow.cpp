@@ -34,5 +34,9 @@ int main() {
     return 1;
   if(testPowI4(-1,-1,0))
     return 1;
+  if(testPowI4(1000,2,1000000))
+    return 1;
+  if(testPowI4(1000,3,1000000000))
+    return 1;
   return 0;
 }

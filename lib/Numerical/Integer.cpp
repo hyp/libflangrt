@@ -1,14 +1,18 @@
 #include "Numerical/Integer.h"
 
+// Exponentation by squaring
 template<typename T>
 static T ipow(T x, T y) {
-  if(y >= 0) {
-    T result = 1;
-    for(; y != 0; --y)
+  if(y < 0) return 0;
+
+  T result = 1;
+  while (y != 0) {
+    if ((y & 1) == 1)
       result *= x;
-    return result;
+    y >>= 1;
+    x *= x;
   }
-  return 0;
+  return result;
 }
 
 LIBFLANG_ABI int8_t  libflang_pow_i1_i1(int8_t x, int8_t y) {
