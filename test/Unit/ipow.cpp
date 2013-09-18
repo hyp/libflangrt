@@ -11,7 +11,7 @@
 #include <iostream>
 #include "Numerical/Integer.h"
 
-bool testPowI4(int32_t x, int32_t y, int32_t expected) {
+static bool testPowI4(int32_t x, int32_t y, int32_t expected) {
   x = libflang_pow_i4_i4(x, y);
   if(x != expected)
     std::cout << "Error in libflang_pow_i4_i4 - expected " << expected
