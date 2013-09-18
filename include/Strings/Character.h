@@ -26,6 +26,11 @@ LIBFLANG_ABI int32_t libflang_compare_char1(const char *LHS, size_t LHSLength,
 
 LIBFLANG_ABI int32_t libflang_lexcompare_char1(const char *LHS, size_t LHSLength,
                                                const char *RHS, size_t RHSLength);
+
+LIBFLANG_ABI size_t libflang_index_char1(const char *String, size_t Length,
+                                         const char *SubString, size_t SubLength,
+                                         int32_t Back);
+
 LIBFLANG_ABI size_t libflang_lentrim_char1(const char *String, size_t Length);
 
 #endif
