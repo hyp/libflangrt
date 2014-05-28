@@ -8,7 +8,7 @@ beautification by scripts.  The fields are: name (N), email (E), web-address
 (W), PGP key ID and fingerprint (P), description (D), and snail-mail address
 (S).
 
-N: Alex L.
+N: Aleksei Lorenz
 E: arphaman@gmail.com
 D: Architect and primary author of libflangrt
 
